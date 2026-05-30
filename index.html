@@ -1,70 +1,52 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cửa Hàng</title>
+  <title>Test Web</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <div class="navbar-wrapper">
-    <nav class="navbar">
-      <div class="nav-logo-zone">
-        <div class="logo-placeholder">
-          <!-- Logo placeholder -->
+  <header class="navbar">
+    <div class="navbar__inner">
+
+      <!-- Left: logo circle + label -->
+      <div class="navbar__brand">
+        <div class="navbar__logo">
+          <i class="fa-solid fa-cart-shopping"></i>
         </div>
+        <span class="navbar__name">LOGO</span>
       </div>
-      <ul class="nav-links">
-        <li><a href="#products">Sản phẩm</a></li>
-        <li><a href="#history">Lịch sử</a></li>
-        <li><a href="#about">Về chúng tôi</a></li>
-      </ul>
+
+      <!-- Center: site name -->
+      <span class="navbar__title">Test Web</span>
+
+      <!-- Right: nav links -->
+      <nav class="navbar__links">
+        <a href="#" class="navbar__link">Home</a>
+        <a href="#" class="navbar__link">About</a>
+        <a href="#" class="navbar__link">Contact</a>
+      </nav>
+
+      <!-- Mobile hamburger -->
+      <button class="navbar__burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+
+    <!-- Mobile dropdown -->
+    <nav class="navbar__mobile" hidden>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
     </nav>
-  </div>
-
-  <!-- HERO SECTION -->
-  <div class="hero-wrapper">
-    <section class="hero">
-      <div class="hero-content1">
-        <span class="hero-label">Bộ sưu tập mới</span>
-        <h1 class="hero-title">Tinh tế</h1>
-        <p class="hero-sub">Khám phá những sản phẩm được chọn lọc kỹ lưỡng,<br />mang đến trải nghiệm mua sắm đẳng cấp.</p>
-        <a href="#products" class="hero-cta">Khám phá ngay</a>
-      </div>
-      <div class="hero-content2">
-        <span class="hero-label">Cam kết chất lượng</span>
-        <h1 class="hero-title">Chuẩn mực</h1>
-        <p class="hero-sub">Mỗi sản phẩm đều trải qua quy trình kiểm định nghiêm ngặt,<br />đảm bảo bạn chỉ nhận được điều tốt nhất.</p>
-        <a href="#about" class="hero-cta">Tìm hiểu thêm</a>
-      </div>
-      <div class="hero-content3">
-        <span class="hero-label">Dịch vụ tận tâm</span>
-        <h1 class="hero-title">Ân cần</h1>
-        <p class="hero-sub">Đội ngũ chăm sóc khách hàng luôn sẵn sàng,<br />mang đến trải nghiệm mua sắm trọn vẹn nhất.</p>
-        <a href="#about" class="hero-cta">Liên hệ ngay</a>
-      </div>
-    </section>
-  </div>
-
-  <!-- FOOTER -->
-  <div class="footer-wrapper">
-    <footer class="footer">
-      <div class="footer-contact">
-        <span class="footer-item">cửahàng@gmail.com</span>
-        <span class="footer-item">0123 456 789</span>
-      </div>
-      <div class="footer-copyright">
-        <div class="logo-placeholder"></div>
-        <span class="footer-copy">© 2025 Cửa Hàng. All rights reserved.</span>
-      </div>
-      <div class="footer-brand">
-        <div class="logo-placeholder"></div>
-      </div>
-    </footer>
-  </div>
+  </header>
 
 </body>
 </html>
