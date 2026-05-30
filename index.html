@@ -24,7 +24,7 @@
       </div>
 
       <!-- Center: site name -->
-      <span class="navbar__title">Test Web</span>
+      <span class="navbar__title">Test web</span>
 
       <!-- Right: nav links -->
       <nav class="navbar__links">
@@ -88,6 +88,19 @@
 
     </div>
   </footer>
+
+  <script>
+    const burger = document.querySelector('.navbar__burger');
+    const mobileNav = document.querySelector('.navbar__mobile');
+    burger.addEventListener('click', () => {
+      mobileNav.removeAttribute('hidden');
+      burger.classList.toggle('is-open');
+      mobileNav.classList.toggle('is-open');
+      if (!mobileNav.classList.contains('is-open')) {
+        mobileNav.setAttribute('hidden', '');
+      }
+    });
+  </script>
 
 </body>
 </html>

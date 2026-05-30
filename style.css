@@ -124,6 +124,9 @@ body {
   transition:
     background var(--dur-slow) var(--ease-out),
     color      var(--dur-slow) var(--ease-out);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 a  { text-decoration: none; color: inherit; }
@@ -299,6 +302,7 @@ img { display: block; max-width: 100%; }
 .main {
   display: grid;
   grid-template-columns: 1fr;
+  align-content: start;
   gap: var(--gap);
   max-width: var(--max-w);
   padding-inline: var(--pad-x);
@@ -306,6 +310,7 @@ img { display: block; max-width: 100%; }
   margin-inline: auto;
   width: 100%;
   font-family: Arial, sans-serif;
+  flex: 1;
 }
 
 /* Content block — 2-row grid (35% title / 65% body) */
