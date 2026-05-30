@@ -57,3 +57,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
   - `hero-content2`: chủ đề "Cam kết chất lượng" — label, title, sub, CTA
   - `hero-content3`: chủ đề "Dịch vụ tận tâm" — label, title, sub, CTA
   - Mobile `@container hero (max-width: 639px)`: `grid-template-columns: 1fr` — 3 cột collapse thành 3 hàng, gutter giữ nguyên `1.5rem`
+### Fixed
+- **Hero desktop layout** — căn giữa nội dung và thu nhỏ font size h1
+  - `.hero-content1/2/3`: thêm `text-align: center` và `align-items: center` → h1 và CTA căn giữa cột
+  - `.hero-cta`: đổi `align-self: flex-start` → `align-self: center`
+  - `.hero-title`: đổi `font-size` từ `clamp(2.4rem, 8vw, 5.5rem)` → `clamp(1.8rem, 2.8vw, 2.8rem)` — vừa với 3-col layout, không wrap
+
+- **Hero column dividers & CTA alignment**
+  - Mỗi `hero-content*`: `display: flex; flex-direction: column; position: relative`
+  - `::after` pseudo-element trên `hero-content1`, `hero-content2`: line `1.5px` màu `var(--accent)` nằm chính giữa gutter (`right: -0.75rem`)
+  - Desktop: line dọc (`width: 1.5px; height: 100%`)
+  - Mobile: override thành line ngang (`width: 100%; height: 1.5px; bottom: -0.75rem`)
+  - `.hero-cta`: `margin-top: auto` — đẩy CTA xuống đáy mỗi col, align cùng hàng ngang nhau
