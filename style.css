@@ -294,6 +294,69 @@ img { display: block; max-width: 100%; }
 }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   3b. MAIN  (1-column grid, neumorphism content blocks)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap);
+  max-width: var(--max-w);
+  padding-inline: var(--pad-x);
+  padding-block: var(--sp-6);
+  margin-inline: auto;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Content block — 2-row grid (35% title / 65% body) */
+.content-block {
+  display: grid;
+  grid-template-rows: 35fr 65fr;
+  min-height: clamp(160px, 22vw, 220px);
+  background: var(--neu-bg);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow:
+    8px 8px 16px var(--neu-shadow-d),
+    -8px -8px 16px var(--neu-shadow-l);
+}
+
+.content-block__row {
+  display: flex;
+  align-items: center;
+  padding-inline: var(--sp-5);
+}
+
+.content-block__row--title {
+  border-bottom: 1px solid var(--neu-shadow-d);
+}
+
+.content-block__row--title h1 {
+  font-size: var(--fs-xl);
+  font-weight: 800;
+  color: var(--neu-text);
+  letter-spacing: -0.02em;
+}
+
+.content-block__row--body {
+  align-items: flex-start;
+  padding-block: var(--sp-3);
+}
+
+.content-block__row--body p {
+  font-size: var(--fs-md);
+  color: #4A4E6A;
+  line-height: 1.7;
+}
+
+/* Responsive: shrink padding on small screens */
+@media (max-width: 480px) {
+  .content-block__row {
+    padding-inline: var(--sp-4);
+  }
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    4. BUTTONS  (reusable, fluid)
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 .btn {
