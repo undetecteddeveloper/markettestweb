@@ -43,6 +43,26 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
   - `.nav-logo-zone`: thêm `width: auto` và `align-items: flex-start` tại `@container navbar (min-width: 600px)` → logo về main start (trái)
   - `.nav-links`: thêm `flex-wrap: nowrap` tại tablet+ → 3 links luôn trên 1 hàng
 
+## [Unreleased — v3]
+
+### Added
+- **Footer module** — cùng style design với navbar
+  - Layout: `display: flex; justify-content: space-between; align-items: center; min-height: var(--footer-min-height)`
+  - 3 section theo thứ tự: `footer-contact` (gmail + SĐT) | `footer-copyright` (logo placeholder + © text) | `footer-brand` (logo placeholder)
+  - `footer-item`: smoke-white bg, `border-radius: 6px`, hover state — cùng pattern navbar links
+  - `footer-copy`: smoke-white bg, font-size nhỏ hơn (`0.78rem`)
+  - `footer-wrapper`: `box-shadow: 0 -2px 16px` để tạo depth từ dưới lên
+- **CSS variables mới** trong `:root`
+  - `--smoke-border: rgba(245, 245, 245, 0.50)` — dùng cho border logo placeholder
+  - `--footer-min-height: 25vh` — chiều cao tối thiểu footer
+  - `--footer-padding: 0 1.5rem` — padding footer
+
+### Changed
+- **`.logo-placeholder`** — class dùng chung thay thế `.nav-logo`
+  - Border đổi từ `dashed` → `solid var(--smoke-border)` (data-driven)
+  - Áp dụng cho: navbar logo, footer copyright logo frame, footer brand logo
+- `nav-logo` div trong HTML đổi class → `logo-placeholder`
+
 ## [Unreleased — v2]
 
 ### Changed
