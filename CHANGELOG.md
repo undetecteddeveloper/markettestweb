@@ -42,3 +42,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - **Navbar tablet+ layout** — reset mobile styles bị rò rỉ sang breakpoint ≥600px
   - `.nav-logo-zone`: thêm `width: auto` và `align-items: flex-start` tại `@container navbar (min-width: 600px)` → logo về main start (trái)
   - `.nav-links`: thêm `flex-wrap: nowrap` tại tablet+ → 3 links luôn trên 1 hàng
+
+## [Unreleased — v2]
+
+### Changed
+- **Hero section** refactored sang Desktop First, 3-column Grid Layout
+  - Xóa `div.hero-visual` (+ `.hero-card`, `.hero-card--sm`) khỏi HTML và CSS
+  - `section.hero`: chuyển từ `display: flex` → `display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem`
+  - Đổi `div.hero-content` → `div.hero-content1`; thêm `div.hero-content2`, `div.hero-content3` (trống, chờ fill)
+  - Xóa toàn bộ `@container hero` breakpoint blocks cũ (mobile responsive để feature sau)
