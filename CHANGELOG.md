@@ -51,3 +51,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
   - `section.hero`: chuyển từ `display: flex` → `display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem`
   - Đổi `div.hero-content` → `div.hero-content1`; thêm `div.hero-content2`, `div.hero-content3` (trống, chờ fill)
   - Xóa toàn bộ `@container hero` breakpoint blocks cũ (mobile responsive để feature sau)
+
+### Added
+- **Hero col 2 & col 3** — fill nội dung và mobile responsive
+  - `hero-content2`: chủ đề "Cam kết chất lượng" — label, title, sub, CTA
+  - `hero-content3`: chủ đề "Dịch vụ tận tâm" — label, title, sub, CTA
+  - Mobile `@container hero (max-width: 639px)`: `grid-template-columns: 1fr` — 3 cột collapse thành 3 hàng, gutter giữ nguyên `1.5rem`

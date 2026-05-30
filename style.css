@@ -186,3 +186,10 @@ body {
   background: var(--sea-blue-dark);
   transform: translateY(-2px);
 }
+
+/* MOBILE (≤ 639px) — collapse to single column */
+@container hero (max-width: 639px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}
