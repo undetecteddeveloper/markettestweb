@@ -357,6 +357,70 @@ img { display: block; max-width: 100%; }
 }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   3c. FOOTER  (neumorphism, flexbox info-block)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.footer-neu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: var(--sp-6);
+  background: var(--neu-bg);
+  border-top: 1px solid var(--neu-shadow-d);
+  box-shadow:
+    inset 0 4px 8px var(--neu-shadow-d),
+    inset 0 -2px 4px var(--neu-shadow-l);
+  font-family: Arial, sans-serif;
+}
+
+.info-block {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--sp-5);
+  width: 100%;
+  max-width: var(--max-w);
+  padding-inline: var(--pad-x);
+}
+
+/* Item 1: logo circle */
+.info-block__logo {
+  width:  clamp(2rem, 4vw, 2.6rem);
+  height: clamp(2rem, 4vw, 2.6rem);
+  background: var(--neu-bg);
+  border-radius: var(--r-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow:
+    4px 4px 9px  var(--neu-shadow-d),
+    -4px -4px 9px var(--neu-shadow-l);
+}
+
+.info-block__logo i {
+  color: var(--neu-accent);
+  font-size: clamp(0.85rem, 1.8vw, 1.1rem);
+}
+
+/* Item 2: owner name */
+.info-block__owner {
+  font-size: var(--fs-lg);
+  font-weight: 800;
+  color: var(--neu-text);
+  letter-spacing: -0.01em;
+}
+
+/* Item 3: contact (email + phone stacked) */
+.info-block__contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  font-size: var(--fs-sm);
+  color: #4A4E6A;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    4. BUTTONS  (reusable, fluid)
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 .btn {
